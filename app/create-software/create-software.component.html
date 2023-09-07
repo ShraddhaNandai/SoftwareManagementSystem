@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="create-software.component.css"> 
+</head>
+<body style="background: center;">
+  <br>
+  <div class="top_link"><a href="http://localhost:4200/home"><img src="assets/backbutton.png" alt="">Return home</a></div>
+
+<div class="col-md-6 offset-md-3">
+    <div class='line'>
+        <h2 class='pop-outin'>ADD SOFTWARE</h2>
+      </div>
+    <form (ngSubmit) = "onSubmit()" >
+
+        <div class="form-group" >
+            <label>  Enter software Name</label>
+            <input type="text" class ="form-control" id = "softwareName"
+                [(ngModel)] = "software.softwareName" name = "softwareName">
+        </div>
+    
+        <div class="form-group">
+            <label>  Enter Developer Name</label>
+            <input type="text" class ="form-control" id = "developer"
+                [(ngModel)] = "software.developerName" name = "developer">
+        </div>
+    
+        <div class="form-group">
+            <label>  Enter Price</label>
+            <input type="text" class ="form-control" id = "price"
+                [(ngModel)] = "software.price" name = "price">
+        </div>
+    
+
+
+        <div class="form-group">
+            <label> Enter rating</label>
+            <input type="text" class ="form-control" id = "rating"
+                [(ngModel)] = "software.rating" name = "rating">
+        </div>
+
+
+
+
+        <div class="form-check">
+            <label>Types Of Software:</label><br />
+
+            
+            <input
+              class="form-check-input"
+              type="radio"
+              name="isDesktopApplication"
+              [(ngModel)]="software.isDesktopApplication"
+              value="true"
+            />
+            <label class="form-check-label"> Desktop Applications</label><br />
+
+
+            <input
+              class="form-check-input"
+              type="radio"
+              name="isWebApplication"
+              [(ngModel)]="software.isDesktopApplication"
+              value="false"
+            />
+            <label class="form-check-label">Web Applications</label><br />
+          </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+
+
+
+
+    </form>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+
+
+          
+
+
+    
+
+ <link rel="stylesheet" href="developer-list.component.css">   
+        
+<table style="margin-top:2pc;" >
+  <br>
+  <br>
+    <thead style="background-color: rgb(102, 139, 199); margin-top: 2pc;">
+        <tr>
+            <th>Developer Name</th>
+            <th>Developer Email </th>
+            <th> Developer Country</th>
+        
+            
+            
+            <th> Actions </th>
+        </tr>
+     
+    </thead>
+    <tbody>
+     
+        <tr *ngFor = "let developer of developers paginate: { itemsPerPage: count, currentPage: pageNo }">
+
+        
+       
+            <td> {{ developer.developerName }} </td>
+            <td>{{developer.developerEmail }}</td>
+            <td> {{developer.developerCountry }} </td>
+            
+            <td>
+              <button (click) = "updateDeveloper(developer.id)" class = "btn btn-info"><i class="fa fa-refresh " style="font: size 15px ;"></i>Update</button>
+              <button (click) = "deleteDeveloper(developer.id)" class = "btn btn-danger" style="margin-left: 10px"><i class="fa fa-trash-o" style="font:size 15px"></i> Delete</button>
+              <button (click) = "developerDetails(developer.id)" class = "btn btn-info" style="margin-left: 10px"><i class="fa fa-eye" style="font-size:15px"></i> View </button>
+              <button (click)="viewSoftware(developer.id)" type="button"  style="margin-left: 10px"class="btn btn-outline-info dropdown-toggle dropdown-toggle-split"  data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Get Software</button>
+              </td>
+        </tr>
+      
+        <tr *ngIf="developers !== null">
+          <button (click)="removeAllDevelopers()" class="m-3 btn btn-sm btn-danger" >
+              Remove All
+            </button>
+      </tr>
+
+
+
+
+
+
+    </tbody>
+</table>
+<div><pagination-controls (pageChange)="pageNo = $event" ></pagination-controls> </div>

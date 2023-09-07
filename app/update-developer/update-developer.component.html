@@ -1,0 +1,43 @@
+
+
+<body style="background: center;">
+  <br>
+  <div class="top_link"><a href="http://localhost:4200/home"><img src="assets/backbutton.png" alt="">Return home</a></div>
+
+<div class="col-md-6 offset-md-3">
+    <div class='line'>
+        <h2 class='pop-outin'>ADD SOFTWARE</h2>
+      </div>
+    <form (ngSubmit) = "onSubmit()" >
+
+        <div class="form-group" >
+            <label>  Developer Name</label>
+            <input type="text" class ="form-control" id = "developerName"
+                [(ngModel)] = "developer.developerName" name = "developerName">
+        </div>
+    
+        <div class="form-group">
+          <label> Developer Email</label>
+          <input type="text" class ="form-control" id = "developerEmail"
+              [(ngModel)] = "developer.developerEmail" name = "developerEmail">
+      </div>
+      <div class="form-group">
+        <label> Developer Country</label>
+        <input type="text" class ="form-control" id = "authorCountry"
+            [(ngModel)] = "developer.developerCountry" name = "developerCountry">
+    </div>
+    
+        <div class="form-check">
+            <label>Types Of Software:</label><br />
+
+            
+            
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+
+
+
+
+    
+    </div> 

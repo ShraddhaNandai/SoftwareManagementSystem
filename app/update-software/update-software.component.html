@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="update-software.component.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="top_link"><a href="software-list/">
+    <img src="assets/backbutton.png" alt="">Return home</a></div>
+
+    <div>
+        <h3> Update Software </h3>
+    </div> 
+
+    
+    
+    <div>
+        <form (ngSubmit) = "onSubmit()">
+            <div class="form-group">
+                <label> Software Name</label><br>
+                <input type="text" class ="form-control" id = "softwareName"
+                    [(ngModel)] = "software.softwareName" name = "softwareName">
+            </div>
+        <br>
+            <div class="form-group">
+                <label> Developer</label>
+                <input type="text" class ="form-control" id = "developer"
+                    [(ngModel)] = "software.developerName" name = "developerName">
+            </div>
+            <br>
+            <div class="form-group">
+                <label> Price</label>
+                <input type="text" class ="form-control" id = "price"
+                    [(ngModel)] = "software.price" name = "price">
+            </div>
+            <br>
+    
+    
+            <div class="form-group">
+                <label> Rating</label>
+                <input type="text" class ="form-control" id = "rating"
+                    [(ngModel)] = "software.rating" name = "rating">
+            </div>
+            <br>
+        
+            <label>Types Of Software:</label><br />
+    
+            <div class="form-group">
+    
+            <input
+              class="form-check-input"
+              type="radio"
+              name="isDesktopApplication"
+              [(ngModel)]="software.isDesktopApplication"
+              value="true"
+            />
+            <label class="form-check-label">DesktopApplication</label><br />
+    
+    
+            <input
+              class="form-check-input"
+              type="radio"
+              name="isWebApplication"
+              [(ngModel)]="software.isDesktopApplication"
+              value="false"
+            />
+            <label class="form-check-label">WebApplication</label><br />
+        </div>
+    
+            <button class = "btn btn-success" type ="submit">Submit</button>
+        </form>
+        </div>

@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="view-customer.component.css">
+<!-- <head>
+    <link rel="stylesheet" href="view-customer.component.css">
+    <style>
+    /* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Style the table header */
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the table rows */
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the table data cells */
+td {
+    padding: 10px;
+}
+
+/* Style the heading */
+h1 {
+    color:black;
+    margin-top: 5pc;
+    font-size: 40px;
+    margin-bottom: 30px; /* Add margin for spacing */
+    margin-left: 30pc;
+}
+</style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <div><div class="top_link"><a href="http://localhost:4200/home"><img src="assets/backbutton.png" alt=""> Return home</a></div></div>
+    <h1> USER LIST </h1>
+    <table>
+    <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>Date</th>
+        <th>User Email</th>
+    </tr>
+    <tr *ngFor="let data_user of user">
+        <td>{{data_user.userID}}</td>
+        <td>{{data_user.userName}}</td>
+        <td>{{data_user.date}}</td>
+        <td>{{data_user.userEmail}}</td>
+    </tr>
+    
+    </table>
+
+    
+</body> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="top_link"><a href="http://localhost:4200/home"><img src="assets/backbutton.png" alt="">Return home</a></div>
+<div class='line'>
+    <h2 class='pop-outin'>VIEW CUSTOMER</h2>
+  </div>
+    <table class = "table table-hover table-dark" style="color: rgb(25, 206, 206);">
+    <tr>
+        <th scope="row">User Id</th>
+        <th scope="row">User Name</th>
+        <th scope="row">Date</th>
+        <th scope="row">User Email</th>
+    </tr>
+    <tr *ngFor="let data_user of user">
+        <td>{{data_user.userID}}</td>
+        <td>{{data_user.userName}}</td>
+        <td>{{data_user.date}}</td>
+        <td>{{data_user.userEmail}}</td>
+    </tr>
+    </table>

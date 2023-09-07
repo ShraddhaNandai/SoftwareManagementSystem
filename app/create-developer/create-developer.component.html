@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="create-developer.component.css">
+<div class="col-md-6 offset-md-3" style="width: 800px;margin: 900pz;">
+    <div class="container" style="text-align: center;">
+    <h3> Add Developer  </h3>
+</div>
+    
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> developer Name</label>
+            <input type="text" class ="form-control" id = "developerName"
+                [(ngModel)] = "developer.developerName" name = "developerName" placeholder="developer Name">
+        </div>
+        <div class="form-group">
+            <label> developer Email</label>
+            <input type="text" class ="form-control" id = "developerEmail"
+                [(ngModel)] = "developer.developerEmail" name = "developerEmail"placeholder= "developer Email">
+        </div>
+        <div class="form-group">
+            <label> developer Country</label>
+            <input type="text" class ="form-control" id = "developerCountry"
+                [(ngModel)] = "developer.developerCountry" name = "developer Country">
+        </div>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    </form>
+    </div>

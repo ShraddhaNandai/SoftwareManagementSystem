@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="login.component.css">
+            <!-- <span>Login here</span>
+     
+          <div class="container">
+            <br/><br><br><br>
+            <h2>User Signin</h2>
+            
+                <fieldset>
+                  <div class="control-group">
+                     
+                    <label class="control-label" for="email">E-mail</label>
+                    <div class="controls">
+                      <input type="email" id="email" name="email" placeholder="Enter your email" class="input-xlarge" #email>
+                      
+                    </div>
+                  </div>
+               
+                  <div class="control-group"> 
+                   
+                    <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                      <input type="password" id="password" name="password" placeholder="Set Password" class="input-xlarge" #password>
+                     
+                    </div>
+                  </div>
+        
+        
+                  <br>
+             
+                <div class="control-group">
+                
+                  <div class="controls">
+                    <button type="submit" class="btn btn-primary" (click)="signin(email.value, password.value)">Signin</button>
+                  </div>
+                </div>
+              </fieldset>
+            
+           </div> -->
+
+
+
+
+
+ <div class="login-page">
+  <div class="form">
+    <div class="login">
+      <div class="login-header">
+        <h3> LOGIN </h3>
+        <p>Please enter your credentials to login.</p>
+      </div>
+    </div>
+    <form class="login-form">
+      <input type="email" id="email" name="email" placeholder="Enter your email" class="input-xlarge" #email>
+      <input type="password" id="password" name="password" placeholder="Set Password" class="input-xlarge" #password>
+
+      <button type="submit" class="btn btn-primary" (click)="signin(email.value, password.value)">LETS GO</button>
+
+    </form>
+  </div>
+</div>
